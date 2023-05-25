@@ -1,0 +1,27 @@
+topic: ~chatbot()
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Replying to speech
+#u:(~hello) ~hello
+
+dynamic:radiostations
+dynamic:countryphrases
+
+proposal: %init ~await
+
+u:(Go back to [top home]) ^execute(FragmentExecutor,frag_splash)
+
+u:(~hello) ^execute(RadioExecutor, stop) ^execute(FragmentExecutor, frag_hello)
+proposal: %hello Hello, nice to meet you ^execute(FragmentExecutor, frag_splash)
+
+u:(~time) ^execute(TimeExecutor) ^execute(RadioExecutor, stop) ^execute(FragmentExecutor, frag_time)
+proposal: %time The time now is $timer ^execute(FragmentExecutor, frag_splash)
+
+u:(~radiostart _~radiostations) $radiostation=$1 ^execute(FragmentExecutor,frag_radio) ^execute(RadioExecutor,frag)
+proposal: %radiosay Now playing $radiostation ^execute(RadioExecutor, start)
+
+u:(~weather _~countryphrases) $country=$1 ^execute(RadioExecutor, stop) ^execute(FragmentExecutor, frag_weather) ^execute(WeatherExecutor)
+proposal: %countrysay The current temperature of $country is $temperature degrees Celcius with $weather
+
+u:(~radiostop) ^execute(RadioExecutor, stop) Okay, I have stopped the radio ^execute(FragmentExecutor, frag_splash)

@@ -1,0 +1,13 @@
+topic: ~concepts()
+
+concept:(hello) [hello hi hey "good morning" "good evening" "good afternoon"]
+
+concept:(introself) {pepper} {["can you" "could you" "please"]} introduce yourself
+
+concept:(introcourse) {pepper} {["can you" "could you" "please"]} introduce the course
+
+concept:(bye) [goodbye "see you" bye "bye bye"]
+
+concept:(confirmation) ^rand["okay" "got it" "alright" "sure"]
+
+concept:(await) ^rand["What should I do?" "Listening" "beep beep boop boop"]

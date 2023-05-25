@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">randomutils</string>
+    <!-- fragment_loading -->
+    <string name="loading">Loading</string>
+
+    <!-- fragment_two -->
+    <string name="no_text">Loading</string>
+    <string name="pic_text">Loading</string>
+    <string name="buttontext">OK</string>
+
+</resources>

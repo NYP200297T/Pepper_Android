@@ -1,0 +1,47 @@
+{
+    "fragments": {
+        "fragment1": {
+            "kind": "pictextview",
+            "next": "pictextview2",
+            "chat": "Hello",
+            "textsettings": 1,
+            "title": "Hello",
+            "image": "Pepper.png"
+        },
+        "menuview1": {
+            "kind": "menuview",
+            "buttons": {
+                "button1": {
+                    "fragment": "home"
+                },
+                "button2": {
+                    "fragment": "pictextview3"
+                }
+            },
+            "responses": {
+                "button1": [
+                    "home"
+                ],
+                "button2": [
+                    "secret"
+                ]
+            }
+        },
+        "navigateview1": {
+            "kind": "navigateview",
+            "location": "Charge",
+            "navsettings": {
+                "bgMove": true,
+                "straight": true,
+                "maxSpd": true
+            }
+        }
+    },
+    "imagepath": "/DynaFlow/images/",
+    "start": "pictextview1",
+    "mapsettings": {
+        "map": "mapData.txt",
+        "points": "points.json",
+        "directory": "/Maps/"
+    }
+}

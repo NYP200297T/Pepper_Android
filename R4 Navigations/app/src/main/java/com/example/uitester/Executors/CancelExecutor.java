@@ -1,0 +1,32 @@
+package com.example.uitester.Executors;
+
+import com.aldebaran.qi.sdk.QiContext;
+import com.aldebaran.qi.sdk.object.conversation.BaseQiChatExecutor;
+import com.example.uitester.MainActivity;
+
+import java.util.List;
+
+/**
+ * FragmentExecutor sets the fragment to be displayed in the placeholder of the main activity
+ * This executor is added to the Chat(see main activity)
+ * Triggered in qiChat as follow : ^execute( FragmentExecutor, frag_XXXX )
+ */
+
+public class CancelExecutor extends BaseQiChatExecutor {
+    private final MainActivity ma;
+    private String TAG = "MSI_CancelExecutor";
+
+    public CancelExecutor(QiContext qiContext, MainActivity mainActivity) {
+        super(qiContext);
+        this.ma = mainActivity;
+    }
+
+    @Override
+    public void runWith(List<String> params) {
+        ma.cancelMoveToLocation();
+        ma.currentChatBot.goToBookmarkSameTopic("cancelGoTo");
+    }
+
+    @Override
+    public void stop() {}
+}

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">gsmintro</string>
+    <!-- fragment_loading -->
+    <string name="loading">Loading</string>
+
+    <!-- fragment_two -->
+    <string name="isFragmentTwo">This is the fragment Two</string>
+    <string name="variableSetTo">The QiVariable is set to : </string>
+    <string name="placeholder">Placeholder</string>
+    <string name="setToA">Set to \"Pepper\"</string>
+    <string name="setToB">Set to \"Nao\"</string>
+    <string name="pepper">Pepper</string>
+    <string name="nao">Nao</string>
+    <string name="no_text">No Text</string>
+    <string name="pic_text">No Text</string>
+    
+    <string name="gsm_script">
+        Good morning students, great to meet you today.\n
+        My name is Pepper, I am a social robot and I am here today to\n
+        introduce the GSM module that you will be taking.\n
+        This module provides an introductory understanding of the fascinating world of robots.\n
+        Students will discover how robots have been evolving,\n
+        how they are built,\n
+        the way they move,\n
+        their interactions with the world\n
+        and their applications in everyday life.\n
+        How will robot change the future of work?\n
+        Do you think I will be taking over the world?\n
+        Will robots like me able to do housework for you?\n
+        Will I replace you in work soon?\n
+        Will I or my fellow robots replace you soon?\n
+        What are the jobs that robots like me will unlikely to replace?\n
+        These are the questions the module will answer as the lesson end.\n
+        On top of that you will also get to know my anatomy.\n
+        Hope you have a enjoyable learning journey.\n
+    </string>
+    <string name="gsm_intro">Hello, I am Pepper and I am 1.20 meters tall. I was born in Softbank Robotics in Paris.</string>
+    
+</resources>

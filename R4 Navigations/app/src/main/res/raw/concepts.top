@@ -1,0 +1,15 @@
+topic: ~concepts()
+
+concept:(hello) [hello hi hey "good morning" "good evening" "good afternoon"]
+
+concept:(introself) {pepper} {["can you" "could you" please]} introduce yourself
+
+concept:(move) {pepper} {["can you" "could you" please]} [move go] {to}
+
+concept:(bye) [goodbye "see you" bye "bye bye"]
+
+concept:(confirmation) ^rand[okay "got it" alright sure]
+
+concept:(await) ^rand["What should I do?" "beep beep boop boop" listening]
+
+concept:(cancel) ["stop moving" stop cancel abort]

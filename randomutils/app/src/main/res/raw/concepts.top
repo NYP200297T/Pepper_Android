@@ -1,0 +1,19 @@
+topic: ~concepts()
+
+concept:(hello) [hello hi hey "good morning" "good evening" "good afternoon"]
+
+concept:(bye) [goodbye "see you" bye "bye bye"]
+
+concept:(confirmation) ^rand["okay" "got it" "alright" "sure"]
+
+concept:(await) ^rand["What should I do?" "Listening" "beep beep boop boop"]
+
+concept:(questionstart) {pepper} {please}
+
+concept:(time) ~questionstart ["tell {me}" "what is"] the time
+
+concept:(radiostart) ~questionstart [play start]
+
+concept:(radiostop) ~questionstart [cut stop] {the} [radio playing]
+
+concept:(weather) ~questionstart ["tell {me}" "what is" "how is"] the [weather temperature humidity "chance of [rain clouds cloud cloudy sunny sun]"] [in at for of]

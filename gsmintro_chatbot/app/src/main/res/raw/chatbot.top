@@ -1,0 +1,35 @@
+topic: ~chatbot()
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Replying to speech
+#u:(~hello) ~hello
+
+proposal: %init ~await
+
+u:(~hello) ^execute(FragmentExecutor, frag_hello)
+proposal: %hello Hello, nice to meet you ^execute(FragmentExecutor, frag_splash)
+
+u:(~introself) ^execute(FragmentExecutor, frag_introself)
+proposal: %introself Hello, I am Pepper and I am 1 point 20 meters tall. I was born in Softbank Robotics in Paris. ^execute(FragmentExecutor, frag_splash)
+
+u:(~introcourse) ^execute(FragmentExecutor, frag_introcourse) ^execute(BookmarkExecutor,introcourse1)
+proposal: %introcourse1 ^execute(TextExecutor,1) Good morning students, great to meet you today. ^execute(BookmarkExecutor,introcourse2)
+proposal: %introcourse2 ^execute(TextExecutor,2) My name is Pepper, I am a social robot and I am here today to ^execute(BookmarkExecutor,introcourse3)
+proposal: %introcourse3 ^execute(TextExecutor,3) introduce the GSM module that you will be taking. ^execute(BookmarkExecutor,introcourse4)
+proposal: %introcourse4 ^execute(TextExecutor,4) This module provides an introductory understanding of the fascinating world of robots. ^execute(BookmarkExecutor,introcourse5)
+proposal: %introcourse5 ^execute(TextExecutor,5) Students will discover how robots have been evolving, ^execute(BookmarkExecutor,introcourse6)
+proposal: %introcourse6 ^execute(TextExecutor,6) how they are built, ^execute(BookmarkExecutor,introcourse7)
+proposal: %introcourse7 ^execute(TextExecutor,7) the way they move, ^execute(BookmarkExecutor,introcourse8)
+proposal: %introcourse8 ^execute(TextExecutor,8) their interactions with the world ^execute(BookmarkExecutor,introcourse9)
+proposal: %introcourse9 ^execute(TextExecutor,9) and their applications in everyday life. ^execute(BookmarkExecutor,introcourse10)
+proposal: %introcourse10 ^execute(TextExecutor,10) How will robot change the future of work? ^execute(BookmarkExecutor,introcourse11)
+proposal: %introcourse11 ^execute(TextExecutor,11) Do you think I will be taking over the world? ^execute(BookmarkExecutor,introcourse12)
+proposal: %introcourse12 ^execute(TextExecutor,12) Will robots like me able to do housework for you? ^execute(BookmarkExecutor,introcourse13)
+proposal: %introcourse13 ^execute(TextExecutor,13) Will I replace you in work soon? ^execute(BookmarkExecutor,introcourse14)
+proposal: %introcourse14 ^execute(TextExecutor,14) Will I or my fellow robots replace you soon? ^execute(BookmarkExecutor,introcourse15)
+proposal: %introcourse15 ^execute(TextExecutor,15) What are the jobs that robots like me will unlikely to replace? ^execute(BookmarkExecutor,introcourse16)
+proposal: %introcourse16 ^execute(TextExecutor,16) These are the questions the module will answer as the lesson end. ^execute(BookmarkExecutor,introcourse17)
+proposal: %introcourse17 ^execute(TextExecutor,17) On top of that you will also get to know my anatomy. ^execute(BookmarkExecutor,introcourse18)
+proposal: %introcourse18 ^execute(TextExecutor,18) Hope you have a enjoyable learning journey. ^execute(FragmentExecutor, frag_splash)
+

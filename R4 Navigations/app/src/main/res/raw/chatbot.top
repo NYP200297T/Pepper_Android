@@ -1,0 +1,35 @@
+topic: ~chatbot()
+# Defining extra concepts out of words or group of words
+#concept:(hello) [hello hi hey "good morning" greetings]
+
+# Replying to speech
+#u:(~hello) ~hello
+
+dynamic:locations
+
+proposal: %start ^empty
+
+proposal: %init ~await ^empty
+proposal: %charge Please close my charging flap
+proposal: %localise Please stay away from me while I localise myself
+proposal: %localerror I am unable to localise myself, please try again
+
+u:(~hello) ^execute(FragmentExecutor, frag_hello)
+proposal: %hello Hello, nice to meet you ^execute(FragmentExecutor, frag_splash)
+
+u:(~introself) ^execute(FragmentExecutor, frag_introself)
+proposal: %introself Hello, I am Pepper and I am 1 point 20 meters tall. I was born in Softbank Robotics in Paris. ^execute(FragmentExecutor, frag_splash)
+
+u:(~move _~locations) $routeloc=$1 ^execute(FragmentExecutor, frag_goto) ^execute(MoveExecutor,$routeloc)
+u:(~move route) ^execute(FragmentExecutor, frag_goto) ^execute(MoveExecutor,route)
+u:(~cancel ~move) ^execute(CancelExecutor)
+u:(~move ~cancel) ^execute(CancelExecutor)
+u:(~cancel) ^execute(CancelExecutor)
+
+proposal: %routesay Going to $routeloc
+proposal: %stuck I am stuck, please help me by opening the charging flap and move me to a clear space.
+proposal: %cancelGoTo ^execute(FragmentExecutor, frag_splash) Alright, move to $routeloc is cancelled.
+
+proposal: %anysay $anysayer
+
+proposal: %nolocation Sorry, an error occured, please try again. ^execute(CancelExecutor)
